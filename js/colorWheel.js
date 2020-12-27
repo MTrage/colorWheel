@@ -20,7 +20,7 @@ var colorWheelDiameter = 256,
      α = 100, // preview color alpha start value in %
      f = 1,   // alpha value head preview color
      t = 4,   /* 1-60 degree of accuracy of the color cuts in the color wheel between the degree numbers
-                 1 stands for the most precise calculation, and 10, for example, for a 10-fold larger colour step
+                 1 stands for the most precise calculation, and 10, for example, for a 10-fold larger color step
                  attention the smaller this value is the more you have to calculate for the colorWheels */
     vB = 2,   // 0-10 colorWheel 1 to 3 can be used with a blur filter to smooth the color transitions afterwards
     bR = 0,   // colorBar first start value
@@ -29,7 +29,7 @@ var colorWheelDiameter = 256,
      m;       // !!! do not change !!! "true/false"-switch for activate colorWheelSetCC function
 
 // BEG Image files (64Base) -------------------------------------------------------------------------------------------
-// Classic background image for the display of transparent colours, such as those used in GIMP or Photoshop.
+// Classic background image for the display of transparent colors, such as those used in GIMP or Photoshop.
 var TB = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAABhGlDQ1BJQ0MgcHJvZmlsZQAAKJF9kT1Iw0AcxV9TRS0VBzuIOGSoThZERcRJq1CECqFWaNXB5NIvaNKQpLg4Cq4FBz8Wqw4uzro6uAqC4AeIk6OToouU+L+k0CLGg+N+vLv3uHsHCPUy06yOMUDTbTOViIuZ7KrY9YogQoigBzMys4w5SUrCd3zdI8DXuxjP8j/35+hVcxYDAiLxLDNMm3iDeGrTNjjvE0dYUVaJz4lHTbog8SPXFY/fOBdcFnhmxEyn5okjxGKhjZU2ZkVTI54kjqqaTvlCxmOV8xZnrVxlzXvyF4Zz+soy12kOIYFFLEGCCAVVlFCGjRitOikWUrQf9/EPun6JXAq5SmDkWEAFGmTXD/4Hv7u18hPjXlI4DnS+OM7HMNC1CzRqjvN97DiNEyD4DFzpLX+lDkx/kl5radEjoG8buLhuacoecLkDDDwZsim7UpCmkM8D72f0TVmg/xYIrXm9Nfdx+gCkqavkDXBwCIwUKHvd593d7b39e6bZ3w9jqXKhzVt+oAAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAAuIwAALiMBeKU/dgAAAAd0SU1FB+QDCxAHEJ9wKzYAAAAZdEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIEdJTVBXgQ4XAAAAMElEQVQ4y2NMTU39z0AEUFdXJ0YZAxMDlcGogaMGDgYDWYjNATdv3hwNw1EDR66BADT2Bc3mwSScAAAAAElFTkSuQmCC',
 // 3 different arrows, AS = Standard, AT = Top and AB = Bottom
     AS = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAAuCAQAAABpVkpOAAABJGlDQ1BJQ0MgcHJvZmlsZQAAKJGdkL9Kw1AUxn9pREV0EP8g4pDBteBiJ5eqEAoKMVawOqVJisUkhiSl+Aa+iT5MB0HwCXwCBWe/Gx0czOKFw/fjcM733Xuh5SRhWs7tQZpVhet3B5eDK2fhDZstVtnADsIy73reCY3n8xXL6EvbeDXP/Xnmo7gMpTNVFuZFBdaBuDOtcsMq1m/7/pH4QexEaRaJn8S7URoZNrt+mkzCH09zm+U4uzg3fdUOLj1O8XAYMmFMQkVbmqlzTId9qUtBwD0loTQhVm+qmYobUSknl0NRX6TbNORt13meUobyGMvLJNyRytPkYf73e+3jrN60Nmd5UAR1y1a1RiN4f4SVAaw9w9J1Q9bi77c1zHTqmX++8QuvD1BIFfnfDwAAAAJiS0dEAACqjSMyAAAACXBIWXMAAC4jAAAuIwF4pT92AAAAB3RJTUUH5AMYESIQNO1plwAAABl0RVh0Q29tbWVudABDcmVhdGVkIHdpdGggR0lNUFeBDhcAAADFSURBVEjH7dExrgFRFIDhn0ZkWoklKGxCpdDYg2LWoZBYhSgkFmABKitQKUT7JMRpVf5XPAUywyhfcv/T3Xw5xbmQSqVSqX9drfi5XsJH3+xucaJVnS8yWVTFPW4zudGrghvsBv44kB2Nz3yCG8ONyOQT7nAdG4bhWK503l973fVw5we7si77AYAcV3cchiuRvAy3ueSeH/jZXC60i/kyc/uAw3BrJssi3Mf5Cw7DuUj/FTfZDz0W8KND2dN85lN8O9M/9gu/FKZIMefyKwAAAABJRU5ErkJggg==',
@@ -730,7 +730,7 @@ function openColorWheel(){
             colorWheel(300,255,"-", 0 ,q); // ------ 300° - 359° with q-switch-value
 
 
-  // BEG --- determination of dynamic colour values and coloured light values -----------------------------------------
+  // BEG --- determination of dynamic color values and colored light values -----------------------------------------
             var greyV = Math.round((d[0]+d[1]+d[2])/3),
                 invCR = Math.round(255-d[0]),
                 invCG = Math.round(255-d[1]),
