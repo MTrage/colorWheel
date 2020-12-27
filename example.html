@@ -1,0 +1,170 @@
+<html>
+  <head>
+    <title>colorWheel</title>
+    <meta charset="utf-8">
+    <meta charset="UTF-8">
+    <meta http-equiv="content-language" content="de">
+    <meta name="author" content="Marc-André Tragé">
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <style>
+      body { background-color: rgb(41,84,135); }
+        td { vertical-align: top; width: 50px; height: 10px; }
+      .TDB { width: 350px; }
+      .TDS { width: 1px; }
+      .TDI { width: 1250px; }
+        h1 { margin-left:   45px;
+             margin-top:    75px;
+             margin-bottom: 10px;
+             font-family:   monospace;
+             font-size:     60px;
+             color:         #FFF;
+             text-shadow:   2px 2px 10px #000;
+           }
+        h2 { margin-top:    25px;
+             margin-left:   45px;
+             font-family:   monospace;
+             font-size:     30px;
+             color:         #FFF;
+             text-shadow:   1px 1px 5px #000;
+           }
+        h3 { margin-top:    0px;
+             margin-left:   45px;
+             font-family:   monospace;
+             font-weight:   normal;
+             font-size:     18px;
+             color:         #FFF;
+             text-shadow:   1px 1px 5px #000;
+          }
+ textarea {
+           font-family:   monospace;
+           font-weight:   normal;
+           font-size:     18px;
+           color:         #FFF;
+           resize: none;
+           overflow:hidden;
+           background-color: rgb(41,84,135);
+           border: 0px;
+          }
+    </style>
+  </head>
+<body>
+<script src="js/colorWheel.js"></script>
+<h1>colorWheel.js</h1>
+<table>
+  <tr>
+    <td><h3><B>Integration&nbsp;under&nbsp;BODY</B></h3></td>
+    <td class="TDS"></td>
+    <td class="TDI"><h3><textarea rows="1" cols="100%"><script src="js/colorWheel.js"></script></textarea></h3></td>
+  </tr>
+  <tr>
+    <td><h3><B>Example&nbsp;Button</B></h3></td>
+    <td class="TDS"></td>
+    <td class="TDI"><h3><textarea rows="1" cols="100%"><script>cwColorButton("Color",4,120,255,100,"onlyButton","25px","25px","center","hidden","5px");</script></textarea></h3></td>
+  </tr>
+  <tr>
+</table>
+<table>
+  <tr>
+    <th colspan="6"></th>
+  </tr>
+  <tr>
+    <td></td>
+    <td class="TDB"><script>cwColorButton("Color 1",204,0,0,100,"onlyButton","150px","20px","center","","0px");</script></td>
+    <td></td>
+    <td class="TDB"><script>cwColorButton("Color 2",4,120,255,100,"onlyButton","25px","25px","center","hidden","5px");</script></td>
+    <td></td>
+    <td class="TDB"><script>cwColorButton("Color 3",40,255,40,100,"onlyButton","25px","25px","center","hidden","50%");</script></td>
+  </tr>
+  <tr>
+    <th colspan="6"></th>
+  </tr>
+  <tr>
+    <td></td>
+    <td class="TDB"><script>cwColorButton("Gelb",255,255,0,100,"onlyButton","125px","25px","center","hidden","5px");</script></td>
+    <td></td>
+    <td class="TDB"><script>cwColorButton("Urg",0,255,127,75,"onlyButton","125px","25px","left","hidden","5px");</script></td>
+    <td></td>
+    <td class="TDB"><script>cwColorButton("Dingo",24,127,255,100,"onlyButton","125px","25px","left","hidden","5px");</script></td>
+  </tr>
+  <tr>
+    <th colspan="6"></th>
+  </tr>
+  <tr>
+    <td></td>
+    <td class="TDB"><script>cwColorButton("Head",0,204,0,50,"colorButton","125px","25px","left","hidden","5px");</script></td>
+    <td></td>
+    <td class="TDB"><script>cwColorButton("Werte",0,64,204,75,"values","125px","25px","right","hidden","5px");</script></td>
+    <td></td>
+    <td class="TDB"><script>cwColorButton("Werte",255,204,100,100,"colorButton","225px","25px","left","hidden","5px");</script></td>
+  </tr>
+</table>
+<h2>Quick guide for the cwColorButton function of colorWheel</h2>
+<h3>cwColorButton("<B>[NAME]</B>",<B>[R]</B>,<B>[G]</B>,<B>[B]</B>,<B>[A]</B>,"<B>[Syle]</B>","<B>[Side X]</B>","<B>[Side Y]</B>","<B>[Alignment]</B>","<B>[Visibility]</B>","<B>[Rounding]</B>");</h3>
+<table>
+  <tr>
+    <td><h3><B>[NAME]</B></h3></td>
+    <td class="TDS"></td>
+    <td class="TDI"><h3>Button name</h3></td>
+  </tr>
+  <tr>
+    <td><h3><B>[R]</B></h3></td>
+    <td class="TDS"></td>
+    <td class="TDI"><h3>0 - 255</h3></td>
+  </tr>
+  <tr>
+    <td><h3><B>[G]</B></h3></td>
+    <td class="TDS"></td>
+    <td class="TDI"><h3>0 - 255</h3></td>
+  </tr>
+  <tr>
+    <td><h3><B>[B]</B></h3></td>
+    <td class="TDS"></td>
+    <td class="TDI"><h3>0 - 255</h3></td>
+  </tr>
+  <tr>
+    <td><h3><B>[A]</B></h3></td>
+    <td class="TDS"></td>
+    <td class="TDI"><h3>1 = 0%<BR>0,5 = 50%<BR>0 = 100%</h3></td>
+  </tr>
+  <tr>
+    <td><h3><B>[Style]</B></h3></td>
+    <td class="TDS"></td>
+    <td class="TDI"><h3>There are 3 possibilities for the main appearance of the button:<BR>1.) onlyButton<BR>2.) colorButton<BR>3.) values</h3></td>
+  </tr>
+  <tr>
+    <td><h3><B>[Side&nbsp;X]</B></h3></td>
+    <td class="TDS"></td>
+    <td class="TDI"><h3>X-Side with e.g. the ending in PX = 100px</h3></td>
+  </tr>
+  <tr>
+    <td><h3><B>[Side&nbsp;Y]</B></h3></td>
+    <td class="TDS"></td>
+    <td class="TDI"><h3>Y-Side with e.g. the ending in PX = 10px</h3></td>
+  </tr>
+  <tr>
+    <td><h3><B>[Alignment]</B></h3></td>
+    <td class="TDS"></td>
+    <td class="TDI"><h3>The alignment of the button text has 3 possibilities:<BR>1.) left<BR>2.) right<BR>3.) centre</h3></td>
+  </tr>
+  <tr>
+    <td><h3><B>[Visibility]</B></h3></td>
+    <td class="TDS"></td>
+    <td class="TDI"><h3>If the value is left blank here, the colour data field always appears, this is intended for the development of new pages for control; in the final version one should then select the option "hidden". With the option "hidden", the colour values are still entered in this field (important for a query or the transmission via form), but this remains invisible for the user.</h3></td>
+  </tr>
+  <tr>
+    <td><h3><B>[Rounding]</B></h3></td>
+    <td class="TDS"></td>
+    <td class="TDI"><h3>Here you can additionally specify the edge rounding of the buttons, for a variation difference with identical use of given CSS.  </h3></td>
+  </tr>
+  <tr>
+    <td colspan="3"><BR><BR></td>
+  </tr>
+  <tr>
+    <td><h3><B>Important</B></h3></td>
+    <td class="TDS"></td>
+    <td class="TDI"><h3>Of course, it is important that the respective CSS as well as Javascripts do not collide with the functions of cwColorButton, therefore you should take a look at the code before using it to avoid later stumbling blocks!</h3></td>
+  </tr>
+</table>
+</body>
+</html>
